@@ -12,16 +12,16 @@ __version__ = '0.022'
 # This is the entry point for jupyter-server-proxy . The packaging metadata
 # tells it about this function. For details, see:
 # https://jupyter-server-proxy.readthedocs.io/en/latest/server-process.html
-def setup_jupyterpgweb():
+def setup_jupytermktinfo():
     # Using a Unix socket prevents other users on a multi-user system from accessing
     # our server. The alternative is a TCP socket ('-p', '{port}').
     return {
-        'command': [sys.executable, '-m', 'jupyterpgweb', '-u', '{unix_socket}'],
+        'command': [sys.executable, '-m', 'jupytermktinfo', '-u', '{unix_socket}'],
         'unix_socket': True,
         'launcher_entry': {
             'enabled': True,
-            'icon_path': '/opt/tljh/hub/share/jupyterhub/jupyterpgweb.svg',
-            'title': 'pgweb',
+            'icon_path': '/opt/tljh/hub/share/jupyterhub/stockboard.svg',
+            'title': '市場觀測',
         },
     }
 
@@ -68,11 +68,11 @@ TEMPLATE = """\
 <!DOCTYPE html>
 <html>
 <head>
-	<title>pgweb</title>
+	<title>Financial Markets</title>
 </head>
  
 <body>
-<iframe src="https://jupyterpgweb.yunlab.app/" width="100%" height="870px" frameborder="0"></iframe>
+<iframe src="https://webapp.yunlab.app/" width="100%" height="870px" frameborder="0"></iframe>
 </body>
 </html>
 """

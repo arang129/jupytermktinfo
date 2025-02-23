@@ -1,4 +1,5 @@
 Jupyter Server Proxy Demo
+內嵌網站
 =========================
 Author:
 This is a demo package showing how to run a web app through
@@ -8,9 +9,9 @@ This mechanism allows a user to run a separate web app through JupyterHub.
 To try it, install this package into the same Python environment which is
 used to launch your single-user server::
 
-    sudo -E pip install git+https://github.com/arang129/jupyterpgweb.git
-    sudo -E pip install --upgrade git+https://github.com/arang129/jupyterpgweb.git
-    sudo -E pip uninstall jupyterpgweb
+    sudo -E pip install git+https://github.com/arang129/jupytermktinfo.git
+    sudo -E pip install --upgrade git+https://github.com/arang129/jupytermktinfo.git
+    sudo -E pip uninstall jupytermktinfo
 
 If your server is already running use the JupyterHub control panel
 (``/hub/home``) to stop and start it. You should have a new 'hello' option in
